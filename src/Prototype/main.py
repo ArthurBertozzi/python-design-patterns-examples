@@ -17,6 +17,7 @@ changes do not affect the prototype or other cloned cars.
 This demonstrates how the prototype design pattern can be used to create new objects by copying an existing prototype, providing a flexible way to create and configure objects based on an existing instance.
 """
 
+
 class CarPrototype:
     def __init__(self, model, color):
         self.model = model
@@ -25,6 +26,7 @@ class CarPrototype:
     def clone(self):
         # Using the built-in copy method to create a shallow copy
         return copy.copy(self)
+
 
 # Client code
 if __name__ == "__main__":

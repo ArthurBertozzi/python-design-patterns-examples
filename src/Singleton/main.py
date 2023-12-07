@@ -6,6 +6,7 @@ class Singleton:
             cls._instance = super(Singleton, cls).__new__(cls)
         return cls._instance
 
+
 def main():
     # Creating instances of Singleton
     singleton1 = Singleton()
@@ -13,6 +14,7 @@ def main():
 
     # Both instances should be the same
     print(f"Is singleton1 the same as singleton2? {singleton1 is singleton2}")
+
 
 if __name__ == "__main__":
     main()

@@ -3,15 +3,18 @@ class CelsiusTemperature:
     def get_temperature(self):
         return 0
 
+
 # Adaptee 2: Fahrenheit temperature class
 class FahrenheitTemperature:
     def get_temperature(self):
         return 32
 
+
 # Target interface: Temperature interface that we want to use
 class Temperature:
     def get_temperature(self):
         pass
+
 
 # Adapter class to adapt CelsiusTemperature to Temperature
 class CelsiusAdapter(Temperature):
@@ -20,7 +23,8 @@ class CelsiusAdapter(Temperature):
 
     def get_temperature(self):
         # Convert Celsius to Fahrenheit
-        return (self.celsius_temp.get_temperature() * 9/5) + 32
+        return (self.celsius_temp.get_temperature() * 9 / 5) + 32
+
 
 # Adapter class to adapt FahrenheitTemperature to Temperature
 class FahrenheitAdapter(Temperature):
@@ -29,11 +33,13 @@ class FahrenheitAdapter(Temperature):
 
     def get_temperature(self):
         # Convert Fahrenheit to Celsius
-        return (self.fahrenheit_temp.get_temperature() - 32) * 5/9
+        return (self.fahrenheit_temp.get_temperature() - 32) * 5 / 9
+
 
 # Client code
 def print_temperature(temp):
-    print(f'Temperature: {temp.get_temperature()}')
+    print(f"Temperature: {temp.get_temperature()}")
+
 
 # Using the Adapter pattern
 celsius_temp = CelsiusTemperature()

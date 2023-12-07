@@ -6,15 +6,18 @@ class Report(ABC):
     def generate_report(self):
         pass
 
+
 # Implementação de relatório de vendas
 class SalesReport(Report):
     def generate_report(self):
         print("Gerando relatório de vendas")
 
+
 # Implementação de relatório de despesas
 class ExpenseReport(Report):
     def generate_report(self):
         print("Gerando relatório de despesas")
+
 
 # Factory Method para criar instâncias de relatórios
 class ReportFactory:
@@ -25,6 +28,7 @@ class ReportFactory:
             return ExpenseReport()
         else:
             raise ValueError("Tipo de relatório desconhecido")
+
 
 # Exemplo de uso do Factory Method
 if __name__ == "__main__":
